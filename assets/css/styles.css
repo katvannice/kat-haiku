@@ -11,7 +11,7 @@ body {
 	color: whitesmoke;
 	font-size: 5rem;
 	overflow: hidden;
-	background-image: url(../img/flames.gif);
+	background-image: url(../img/trees.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -25,7 +25,97 @@ body {
 	margin: 10% 4rem 0 4rem;
 }
 
-.last {
-	padding-bottom: 2rem;
-	border-bottom: 2px solid rgb(220, 200, 180);
+div {
+	transition-property: transform;
+	transition-duration: 3s;
+}
+.pol {
+font-family: "Noto Sans Mono", monospace;
+font-size: 3rem;
+}
+
+.dia{
+font-family: "Hi Melody", sans-serif;
+font-size: 4rem;
+}
+
+.dia-line {
+	/* transform: skew(30deg, 30deg); */
+	font-family: "Hi Melody", sans-serif;
+	font-size: 4rem;
+}
+
+.scream-line {
+	font-family: "Rubik Wet Paint", system-ui;
+	font-size: 3.5rem;
+	grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.scream-line div {
+    flex: 0 0 auto;
+}
+
+.scream-line a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.scream-line a:hover {
+    text-decoration: underline;
+}
+/*
+.last:hover {
+	animation-name: growAndGlow;
+	animation-duration: 3s;
+}
+*/
+
+@keyframes growAndGlow {
+	from {
+		color: whitesmoke;
+	}
+
+	50% {
+		color: dodgerblue;
+		transform: skewX(30deg);
+	}
+
+	to {
+		transform: scale(3);
+		color: red;
+	}
+}
+
+.dia-yell a:hover {
+    animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 0 red, -2px 0 cyan;
+        transform: translate(0);
+    }
+    20% {
+        text-shadow: -2px 0 red, 2px 0 cyan;
+        transform: translate(-2px, 1px);
+    }
+    40% {
+        text-shadow: 2px 0 red, -2px 0 cyan;
+        transform: translate(2px, -1px);
+    }
+    60% {
+        text-shadow: -2px 0 red, 2px 0 cyan;
+        transform: translate(-1px, 2px);
+    }
+    80% {
+        text-shadow: 2px 0 red, -2px 0 cyan;
+        transform: translate(1px, -2px);
+    }
+    100% {
+        text-shadow: -2px 0 red, 2px 0 cyan;
+        transform: translate(0);
+    }
 }
